@@ -26,5 +26,8 @@ jobs:
         role-session-name: aws-sam-template-github-actions
         aws-region: us-east-1
 
-    - name: Deploy Backend
-      run: sam build && sam deploy --resolve-s3
+    - name: SAM build
+      run: sam build
+
+    - name: SAM Deploy
+      run: sam deploy
